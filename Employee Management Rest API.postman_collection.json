@@ -1,0 +1,361 @@
+{
+	"info": {
+		"_postman_id": "32171130-5cd0-41a1-aaa7-5c49ce802c60",
+		"name": "Employee Management Rest API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20664339"
+	},
+	"item": [
+		{
+			"name": "Add Role",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test1",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "welcome",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"role\": \"REVIEWER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/role/addRole",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"role",
+						"addRole"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add User",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "welcome",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "test1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test3\",\r\n    \"password\": \"welcome\",\r\n    \"roles\":[{\r\n        \"id\":3,\r\n        \"name\":\"ROLE_REVIEWER\"\r\n    }]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/user/addUser",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"user",
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Employee",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test1",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "welcome",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Neal\",\r\n    \"lastName\":\"Caffree\",\r\n    \"email\":\"whitecollar@hotstar.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/employee/addEmployee",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"employee",
+						"addEmployee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test1",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "welcome",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 7,\r\n    \"firstName\": \"Peter\",\r\n    \"lastName\": \"Burge\",\r\n    \"email\": \"whitecollar@hotstar.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/employee/updateEmployee",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"employee",
+						"updateEmployee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test1",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "welcome",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/employee/deleteEmployeeId/7",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"employee",
+						"deleteEmployeeId",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee Details",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test3",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "welcome",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/employee/getAllEmployees",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"employee",
+						"getAllEmployees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get employee by id",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test3",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "welcome",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/employee/getEmployeeById/2",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"employee",
+						"getEmployeeById",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee by firstname",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test3",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "welcome",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/employee/getEmployeeByFirstname/Rachel",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"employee",
+						"getEmployeeByFirstname",
+						"Rachel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all employees custom sorted",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test3",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "welcome",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/employee/getAllEmployeesCustomSorted?order=DESC",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"employee",
+						"getAllEmployeesCustomSorted"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "DESC"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
