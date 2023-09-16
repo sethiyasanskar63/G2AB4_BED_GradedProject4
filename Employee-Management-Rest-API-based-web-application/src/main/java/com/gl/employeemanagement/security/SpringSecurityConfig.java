@@ -28,11 +28,6 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 	}
 
 	@Override
-	public void configure(WebSecurity web) throws Exception {
-		web.ignoring().antMatchers("/h2-console/**");
-	}
-
-	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.cors().disable();
 		http.csrf().disable();
